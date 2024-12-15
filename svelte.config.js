@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,7 +11,8 @@ const config = {
 			$components: 'src/lib/components',
 			$assets: 'src/assets'
 		}
-	}
+	},
+    runtime: 'nodejs22.x',
 };
 
 export default config;
